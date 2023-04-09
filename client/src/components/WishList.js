@@ -4,7 +4,6 @@ const wishList = () => {
   return (
     <div>
       sdfghjklmù!
-      
     </div>
   )
 }

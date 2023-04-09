@@ -14,6 +14,7 @@ import Nav from "./components/Nav"
 import'./style/home.css'
 import'./style/cards.css'
 import { getproduct } from "./JS/productSlice/productSlice";
+import Card from "./components/Card";
 
 function App() {
   const isAuth = localStorage.getItem("token");
@@ -50,6 +51,8 @@ function App() {
           <Route path="/profil" element={<Profil />} />
         </Route>{" "}
       </Routes>
+
+
     </div>
   );
 }

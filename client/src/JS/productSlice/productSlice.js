@@ -28,9 +28,9 @@ return result
     }
 })
 
-export const updateproduct=createAsyncThunk('product/update',async({id, user})=>{
+export const updateproduct=createAsyncThunk('product/update',async({id, product})=>{
     try{
-let result=axios.put(`http://localhost:5000/product/${id}`,user)
+let result=axios.put(`http://localhost:5000/product/${id}`,product)
 return result
     }catch(error){
     console.log(error)

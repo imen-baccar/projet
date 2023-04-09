@@ -8,14 +8,10 @@ function Addproduct() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [house, sethouse] = useState({
-    id: Math.random(),
-    img: "",
-    title: "",
-    description: "",
+    name: "",
     price: "",
-    bath: "",
-    bed: "",
-    sqrt: ""
+    description: "",
+    image: "",
   })
 
   const dispatch = useDispatch();
@@ -37,12 +33,12 @@ function Addproduct() {
               <div className='modal-inputs'>
                 <div className="mb-3" controlId="formBasicEmail">
                   <label>Product image</label>
-                  <input type="text" placeholder="Enter image product" onChange={(e) => sethouse({ ...house, img: e.target.value })} />
+                  <input type="text" placeholder="Enter image product" onChange={(e) => sethouse({ ...house, image: e.target.value })} />
 
                 </div>
                 <div className="mb-3" controlId="formBasicEmail">
                   <label>Product title</label>
-                  <input type="text" placeholder="Enter title product" onChange={(e) => sethouse({ ...house, title: e.target.value })} />
+                  <input type="text" placeholder="Enter title product" onChange={(e) => sethouse({ ...house, name: e.target.value })} />
 
                 </div>
                 <div className="mb-3" controlId="formBasicEmail">
@@ -53,21 +49,6 @@ function Addproduct() {
                 <div className="mb-3" controlId="formBasicEmail">
                   <label>Product price</label>
                   <input type="text" placeholder="Enter price" onChange={(e) => sethouse({ ...house, price: e.target.value })} />
-
-                </div>
-                <div className="mb-3" controlId="formBasicEmail">
-                  <label>Number of bathroom</label>
-                  <input type="text" placeholder="Enter Number of bathroom" onChange={(e) => sethouse({ ...house, bath: e.target.value })} />
-
-                </div>
-                <div className="mb-3" controlId="formBasicEmail">
-                  <label>Number of bedroom</label>
-                  <input type="text" placeholder="Enter Number of bedroom" onChange={(e) => sethouse({ ...house, bed: e.target.value })} />
-
-                </div>
-                <div className="mb-3" controlId="formBasicEmail">
-                  <label>Area</label>
-                  <input type="text" placeholder="Enter the area" onChange={(e) => sethouse({ ...house, sqrt: e.target.value })} />
 
                 </div>
 
